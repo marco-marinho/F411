@@ -57,4 +57,26 @@ void AHB1_gpio_enable(GPIO_TypeDef *gpio){
     }
 }
 
+int8_t GPIO_as_enum(GPIO_TypeDef *gpio){
+    if(gpio == GPIOA){
+        return GPIOA_ENUM;
+    }
+    else if(gpio == GPIOB){
+        return GPIOB_ENUM;
+    }
+    else if(gpio == GPIOC){
+        return GPIOC_ENUM;
+    }
+    else if(gpio == GPIOD){
+        return GPIOD_ENUM;
+    }
+    else if(gpio == GPIOE){
+        return GPIOE_ENUM;
+    }
+    else if(gpio == GPIOH){
+        return GPIOH_ENUM;
+    }
+    return -1;
+}
+
 
