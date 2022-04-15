@@ -25,7 +25,6 @@ uint32_t adc_read(void){
 }
 
 void adc_set_sequence(const uint8_t* channels, uint8_t num_channels){
-    ADC1->SQR3;
     for(int cur_chan = 0; cur_chan < num_channels; cur_chan++){
         if(cur_chan < 6){
             ADC1->SQR3 &= ~(0x1F << cur_chan * 5);
